@@ -1,0 +1,13 @@
+{
+  "project_name": "My Work Dashboard",
+  "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '-').replace('_', '-') }}",
+  "owner_name": "Your Name",
+  "primary_tracker_name": "Confluence",
+  "primary_tracker_url": "https://example.atlassian.net/wiki/spaces/EXAMPLE/overview",
+  "github_username": "your-github-username",
+  "key_repo_1": "example-repo-one",
+  "key_repo_2": "example-repo-two",
+  "_copy_without_render": [
+    "notes/*"
+  ]
+}

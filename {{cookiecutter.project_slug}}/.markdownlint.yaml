@@ -1,0 +1,14 @@
+# markdownlint-cli2 config — see https://github.com/DavidAnson/markdownlint
+default: true
+
+# Dashboard/task files use long descriptive links and wrapped bullet text;
+# line length would flag almost every line without adding real value here.
+MD013: false
+
+# Files intentionally start with a top-level heading that isn't always "# Title Case"
+# (e.g. "# 2026-09-22 — Event Title" in notes/).
+MD041: false
+
+# Duplicate headings are common across notes/ files (e.g. every note may have a "## Context")
+MD024:
+  siblings_only: true

@@ -1,0 +1,18 @@
+name: Test template
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  generate-and-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+      - name: Generate a project with default answers
+        run: uvx cookiecutter . --no-input
+      - uses: DavidAnson/markdownlint-cli2-action@v18
+        with:
+          config: my-work-dashboard/.markdownlint.yaml
+          globs: "my-work-dashboard/**/*.md"
